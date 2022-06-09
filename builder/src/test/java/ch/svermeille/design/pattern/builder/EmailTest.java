@@ -1,7 +1,6 @@
 package ch.svermeille.design.pattern.builder;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -21,10 +20,10 @@ class EmailTest {
 
     // WHEN
     final var email = Email.builder()
-        .from(from)
-        .to(to)
-        .title(title)
-        .content(content)
+        .withFrom(from)
+        .withTo(to)
+        .withTitle(title)
+        .withContent(content)
         .build();
 
     // THEN
@@ -43,8 +42,8 @@ class EmailTest {
 
     // WHEN
     final var email = Email.builder()
-        .title(title)
-        .content(content)
+        .withTitle(title)
+        .withContent(content)
         .build();
 
     // THEN

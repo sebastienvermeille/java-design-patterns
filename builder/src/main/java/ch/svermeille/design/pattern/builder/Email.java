@@ -7,7 +7,7 @@ import lombok.ToString;
 /**
  * @author Sebastien Vermeille
  */
-@Builder
+@Builder(setterPrefix = "with")
 @Getter
 @ToString
 public class Email {
